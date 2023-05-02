@@ -20,7 +20,7 @@ function CheckoutForm() {
         e.preventDefault();
         if (!stripe || !elements || user.cart.count <= 0) return;
         setPaying(true);
-        const { client_secret } = await fetch("https://marwan-ecommerce-mern-app.herokuapp.com/create-payment", {
+        const { client_secret } = await fetch("https://marwan-ecommerce-app.onrender.com/create-payment", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
